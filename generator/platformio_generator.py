@@ -144,7 +144,7 @@ else:
     #
     # Add generated includes and sources to build environment
     #
-    env.Append(CPPPATH=[generated_src_dir])
+    env.Append(CPPPATH=[generated_src_dir, nanopb_root])
 
     # Fix for ESP32 ESP-IDF https://github.com/nanopb/nanopb/issues/734#issuecomment-1001544447
     global_env = DefaultEnvironment()
